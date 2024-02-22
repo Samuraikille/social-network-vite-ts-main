@@ -3,6 +3,9 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 import { RegistrationPage } from "./pages/RegistrationPage/RegistrationPage";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme/theme";
+import { SCContainer } from "./Container.styled";
 
 const routerConfig = createBrowserRouter([
   {
@@ -27,9 +30,11 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="container">
-          <RouterProvider router={routerConfig} />
-        </div>
+          <SCContainer>
+            <ThemeProvider theme={theme}>
+             <RouterProvider router={routerConfig} />
+            </ThemeProvider>
+          </SCContainer>    
       </div>
     </>
   );

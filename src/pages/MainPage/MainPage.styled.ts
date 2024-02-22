@@ -1,4 +1,7 @@
-.MainPage {
+import styled from "styled-components";
+
+export const SCMainPage = styled.div`
+
   display: grid;
   grid-template-areas: "L M R";
   grid-template-columns: minmax(300px, 360px) auto minmax(300px, 360px);
@@ -23,7 +26,6 @@
       margin-bottom: 20px;
     }
   }
-}
 
 @media (max-width: 1440px) {
   .MainPage {
@@ -47,10 +49,10 @@
 }
 
 .Navbar {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   border-radius: 20px;
   padding: calc(1vw + 11px);
-  background-color: var(--elems-bgc);
+  background-color:${(props) => props.theme.colors.elemBgs} ;
   color: var(--text-color);
 
   .navbar__list {
@@ -818,3 +820,5 @@
     }
   }
 }
+
+`

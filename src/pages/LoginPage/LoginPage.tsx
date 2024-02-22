@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { AppHeading } from "../../components/Typography/AppHeading";
 import { AppButton } from "../../components/UI/AppButton/AppButton";
 import { AppInput } from "../../components/UI/AppInput/AppInput";
-import "./LoginPage.scss";
 import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
+import { SCLoginPage } from "./LoginPage.styled";
 
 export const LoginPage = () => {
   return (
-    <div className="LoginPage">
+    <SCLoginPage>
       <AppHeading headingText="Авторизация" headingType="h1" />
       <form action="#">
         <AppInput inputPlaceholder="Номер телефона" inputType="tel" />
@@ -18,6 +18,6 @@ export const LoginPage = () => {
       </form>
       <a href="#">Забыли пароль?</a>
       <RegistrationInfo linkPath="/registration"/>
-    </div>
+    </SCLoginPage>
   );
 };

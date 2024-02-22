@@ -7,26 +7,26 @@ import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { SubscribersList } from "../../components/SubscribersList/SubscribersList";
 import { Header } from "../../components/UI/Header/Header";
 import { WhatsNew } from "../../components/WhatsNew/WhatsNew";
-import "./MainPage.scss";
+import { SCMainPage } from "./MainPage.styled";
 
 export const MainPage = () => {
   return (
-    <div className="MainPage">
-      <Header/>
+    <SCMainPage>
+      <Header />
       <aside className="LeftSide">
-        <Sidebar/>
-        <SubscribersList/>
+        <Sidebar />
+        <SubscribersList />
       </aside>
       <main className="Main">
-        <WhatsNew/> 
-        <AppHistory/>
-        <AppPost/>
-        <AppRepost/>
+        <WhatsNew />
+        <AppHistory />
+        <AppPost />
+        <AppRepost />
       </main>
       <aside className="RightSide">
-        <CloseFriends/>
-        <MusicBlock/>
+        <CloseFriends />
+        <MusicBlock />
       </aside>
-    </div>
+    </SCMainPage>
   );
 };

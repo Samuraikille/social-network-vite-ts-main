@@ -9,11 +9,11 @@ import { Header } from "../../components/UI/Header/Header";
 import { UserBiography } from "../../components/UserBiography/UserBiography";
 import { UserPosts } from "../../components/UserPosts/UserPosts";
 import { WhatsNew } from "../../components/WhatsNew/WhatsNew";
-import "./ProfilePage.scss";
+import { SCProfilePage } from "./ProfilePage.styled";
 
 export const ProfilePage = () => {
   return (
-    <div className="ProfilePage">
+    <SCProfilePage>
       <Header />
       <aside className="LeftSide">
         <Sidebar />
@@ -31,6 +31,7 @@ export const ProfilePage = () => {
         <FriendsBlock />
         <MusicBlock />
       </aside>
-    </div>
+    </SCProfilePage>
+      
   );
 };
