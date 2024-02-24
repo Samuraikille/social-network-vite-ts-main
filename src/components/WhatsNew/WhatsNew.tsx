@@ -1,7 +1,9 @@
+import { SCWhatsNew } from "./WhatsNew.styled"
+
 export const WhatsNew = () => {
   return (
-    <div className="WhatsNew">
-      <img src="./img/users/arina-volkova.jpeg" alt="User" />
+    <SCWhatsNew>
+       <img src="./img/users/arina-volkova.jpeg" alt="User" />
       <input
         type="text"
         name="whats-new"
@@ -40,6 +42,7 @@ export const WhatsNew = () => {
           />
         </svg>
       </div>
-    </div>
+    </SCWhatsNew>
+     
   );
 };

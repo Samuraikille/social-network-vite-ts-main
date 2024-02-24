@@ -1,8 +1,10 @@
+import { AppHeading } from "../Typography/AppHeading"
+
 export const CloseFriends = () => {
   return (
     <div className="List">
       <div className="List__title">
-        <h2>Близкие друзья</h2>
+        <AppHeading headingText="Близкие друзья" headingType="h2"/>
         <span className="count">123</span>
       </div>
       <div className="UserElem">

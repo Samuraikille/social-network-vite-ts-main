@@ -1,8 +1,10 @@
+import { AppHeading } from "../Typography/AppHeading"
+
 export const MusicBlock = () => {
   return (
     <div className="MusicBlock">
       <div className="MusicBlock__title">
-        <h2>Вы недавно слушали</h2>
+        <AppHeading headingText="Вы недавно слушали" headingType="h2"/>
         <span>123</span>
       </div>
       <div className="MusicElem">

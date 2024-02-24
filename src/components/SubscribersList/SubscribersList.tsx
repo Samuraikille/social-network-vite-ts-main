@@ -1,8 +1,10 @@
+import { AppHeading } from "../Typography/AppHeading"
+
 export const SubscribersList = () => {
   return (
     <div className="List">
       <div className="List__title">
-        <h2>Подписки</h2>
+        <AppHeading headingText="Подписки" headingType="h2"/>
         <span className="count">123</span>
       </div>
       <div className="UserElem">
