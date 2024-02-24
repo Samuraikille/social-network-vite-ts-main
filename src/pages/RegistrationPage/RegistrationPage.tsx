@@ -1,9 +1,7 @@
-import { AppHeading } from "../../components/Typography/AppHeading"
-
 export const RegistrationPage = () => {
   return (
     <div>
-      <AppHeading headingText="Registration Page" headingType="h1"/>
+      <h1>Registration Page</h1>
     </div>
   );
 };

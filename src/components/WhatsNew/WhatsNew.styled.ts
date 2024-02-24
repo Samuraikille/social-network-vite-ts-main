@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+
 export const SCWhatsNew = styled.div`
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
-  background-color: ${(props) => props.theme.colors.elemsBgs};
+
+  box-shadow: 0 0 10px var(--light-gray);
+  background-color: var(--elems-bgc);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
@@ -36,22 +38,25 @@ export const SCWhatsNew = styled.div`
       width: 24px;
       border: 1px solid transparent;
       border-radius: 10px;
-      fill: ${(props) => props.theme.colors.primeColor};
+      fill: var(--prime-color);
       padding: 10px;
       box-sizing: content-box;
 
       transition: 200ms;
 
       &:hover {
-        border-color:${(props) => props.theme.colors.lightGray};
-        background-color:${(props) => props.theme.colors.bgs};
+        border-color: var(--light-gray);
+        background-color: var(--bgc);
       }
 
       &:active {
         transition: 100ms;
-        background-color:${(props) => props.theme.colors.primeColor};
+        background-color: var(--prime-color);
         fill: white;
       }
     }
   }
+
+
+
 `

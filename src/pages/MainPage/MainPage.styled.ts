@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const SCMainPage = styled.div`
 
   display: grid;
@@ -9,6 +10,8 @@ export const SCMainPage = styled.div`
 
   .LeftSide {
     grid-area: L;
+
+ 
   }
 
   .Main {
@@ -22,6 +25,7 @@ export const SCMainPage = styled.div`
       margin-bottom: 20px;
     }
   }
+
 
 @media (max-width: 1440px) {
   .MainPage {
@@ -43,8 +47,6 @@ export const SCMainPage = styled.div`
     }
   }
 }
-
-
 
 @media (max-width: 1100px) {
   .MainPage {
@@ -77,8 +79,8 @@ export const SCMainPage = styled.div`
 }
 
 .List {
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
-  background-color: ${(props) => props.theme.colors.elemsBgs};
+  box-shadow: 0 0 10px var(--light-gray);
+  background-color: var(--elems-bgc);
   border-radius: 20px;
   padding: calc(1vw + 11px);
 
@@ -106,19 +108,19 @@ export const SCMainPage = styled.div`
   transition: 200ms;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.lightGray};
+    background-color: var(--light-gray);
   }
 
   &:active {
     transition: 100ms;
-    background-color: ${(props) => props.theme.colors.primeColor};
+    background-color: var(--prime-color);
     p {
       color: white;
     }
 
     .Badge {
       background-color: white;
-      color: ${(props) => props.theme.colors.textColor};
+      color: var(--text-color);
     }
   }
 
@@ -129,7 +131,7 @@ export const SCMainPage = styled.div`
       content: "";
       height: 1px;
       width: 80%;
-      background-color:${(props) => props.theme.colors.lightGray};
+      background-color: var(--light-gray);
 
       position: absolute;
       bottom: -8px;
@@ -160,7 +162,7 @@ export const SCMainPage = styled.div`
     font-weight: 300;
 
     &._online {
-      color:${(props) => props.theme.colors.green};
+      color: var(--green);
     }
   }
 }
@@ -198,7 +200,7 @@ export const SCMainPage = styled.div`
 
     &:hover {
       scale: 1.1;
-      filter: drop-shadow(0 0 10px ${(props) => props.theme.colors.primeColor});
+      filter: drop-shadow(0 0 10px var(--prime-color));
     }
 
     &:active {
@@ -233,7 +235,7 @@ export const SCMainPage = styled.div`
   span {
     display: block;
     width: min-content;
-    color: ${(props) => props.theme.colors.elemsBgs};
+    color: var(--elems-bgc);
     transition: 200ms;
     font-size: 14px;
   }
@@ -255,7 +257,7 @@ export const SCMainPage = styled.div`
     }
 
     &::before {
-      background-color: ${(props) => props.theme.colors.primeColor};
+      background-color: var(--prime-color);
       opacity: 0.7;
     }
   }
@@ -277,7 +279,7 @@ export const SCMainPage = styled.div`
     height: 40px;
     width: 40px;
     object-fit: cover;
-    border: 2px solid ${(props) => props.theme.colors.blue};
+    border: 2px solid var(--blue);
     border-radius: 50%;
 
     margin-bottom: 10px;
@@ -295,7 +297,7 @@ export const SCMainPage = styled.div`
     transition: 200ms;
 
     .icon-plus {
-      fill: ${(props) => props.theme.colors.primeColor};
+      fill: var(--prime-color);
       width: 14px;
       margin-bottom: 20px;
       transition: 200ms;
@@ -311,7 +313,7 @@ export const SCMainPage = styled.div`
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    background-color: ${(props) => props.theme.colors.bgs};
+    background-color: var(--bgc);
 
     transition: 200ms;
   }
@@ -327,7 +329,7 @@ export const SCMainPage = styled.div`
       border-radius: 0;
       width: 100%;
       height: 100%;
-      background-color: ${(props) => props.theme.colors.primeColor};
+      background-color: var(--prime-color);
       opacity: 0.7;
     }
 
@@ -338,9 +340,9 @@ export const SCMainPage = styled.div`
 }
 
 .Post {
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
+  box-shadow: 0 0 10px var(--light-gray);
   padding: calc(1vw + 11px);
-  background-color:${(props) => props.theme.colors.elemsBgs};
+  background-color: var(--elems-bgc);
   border-radius: 20px;
   margin-bottom: 20px;
 
@@ -349,13 +351,13 @@ export const SCMainPage = styled.div`
   &._liked {
     .icon-wrapper {
       .icon-like {
-        fill:${(props) => props.theme.colors.red};
+        fill: var(--red);
         stroke: 0;
         stroke-width: 0;
       }
 
       .likes-count {
-        color: ${(props) => props.theme.colors.red};
+        color: var(--red);
       }
     }
   }
@@ -363,7 +365,7 @@ export const SCMainPage = styled.div`
   &._marked {
     .icon-wrapper {
       .icon-mark {
-        fill: ${(props) => props.theme.colors.primeColor};
+        fill: var(--prime-color);
         stroke: 0;
         stroke-width: 0;
       }
@@ -407,16 +409,16 @@ export const SCMainPage = styled.div`
   box-sizing: content-box;
   border-radius: 15px;
 
-  fill: ${(props) => props.theme.colors.darkGray};
+  fill: var(--dark-gray);
   transition: 200ms;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.lightGray};
+    background-color: var(--light-gray);
   }
 
   &:active {
     transition: 100ms;
-    background-color: ${(props) => props.theme.colors.primeColor};
+    background-color: var(--prime-color);
     fill: white;
   }
 }
@@ -450,7 +452,7 @@ export const SCMainPage = styled.div`
 }
 
 .Repost__wrapper {
-  border-left: 1px solid ${(props) => props.theme.colors.gray};
+  border-left: 1px solid var(--gray);
   padding-left: 30px;
   margin-left: 30px;
 }
@@ -467,7 +469,7 @@ export const SCMainPage = styled.div`
   .icon-wrapper {
     cursor: pointer;
     padding: 10px;
-    background-color: ${(props) => props.theme.colors.bgc};
+    background-color: var(--bgc);
     border-radius: 15px;
 
     display: flex;
@@ -483,11 +485,11 @@ export const SCMainPage = styled.div`
     user-select: none;
 
     &:hover {
-      background-color: ${(props) => props.theme.colors.lightGray};
+      background-color: var(--light-gray);
     }
 
     .count {
-      color: ${(props) => props.theme.colors.darkGray};
+      color: var(--dark-gray);
       font-weight: 400;
     }
 
@@ -499,12 +501,12 @@ export const SCMainPage = styled.div`
     }
 
     .icon-like {
-      stroke: ${(props) => props.theme.colors.darkGray};
+      stroke: var(--dark-gray);
       stroke-width: 2px;
     }
 
     .icon-mark {
-      stroke: ${(props) => props.theme.colors.darkGray};
+      stroke: var(--dark-gray);
       stroke-width: 2px;
     }
 
@@ -515,8 +517,8 @@ export const SCMainPage = styled.div`
 }
 
 .MusicBlock {
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
-  background-color: ${(props) => props.theme.colors.elemsBgs};
+  box-shadow: 0 0 10px var(--light-gray);
+  background-color: var(--elems-bgc);
   padding: calc(1vw + 11px);
   border-radius: 20px;
 
@@ -528,7 +530,7 @@ export const SCMainPage = styled.div`
     justify-content: space-between;
 
     span {
-      color: ${(props) => props.theme.colors.primeColor};
+      color: var(--prime-color);
       font-weight: 400;
     }
   }
@@ -548,7 +550,7 @@ export const SCMainPage = styled.div`
     transition: 200ms;
 
     &:hover {
-      background-color: ${(props) => props.theme.colors.lightGray};
+      background-color: var(--light-gray);
     }
 
     img {
@@ -577,7 +579,7 @@ export const SCMainPage = styled.div`
       flex: 0 0 24px;
       height: 24px;
 
-      border: 2px solid ${(props) => props.theme.colors.primeColor};
+      border: 2px solid var(--prime-color);
       border-radius: 50%;
 
       position: relative;
@@ -587,7 +589,7 @@ export const SCMainPage = styled.div`
         border-radius: 5px;
         height: 2px;
         width: 70%;
-        background-color: ${(props) => props.theme.colors.primeColor};
+        background-color: var(--prime-color);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -600,7 +602,7 @@ export const SCMainPage = styled.div`
         border-radius: 5px;
         width: 2px;
         height: 70%;
-        background-color: ${(props) => props.theme.colors.primeColor};
+        background-color: var(--prime-color);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -632,14 +634,14 @@ export const SCMainPage = styled.div`
   transition: 200ms;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.lightGray};
+    background-color: var(--light-gray);
   }
 
   &::before {
     content: "";
     height: 1px;
     width: 100%;
-    background-color: ${(props) => props.theme.colors.lightGray};
+    background-color: var(--light-gray);
 
     position: absolute;
     top: -8px;
@@ -670,7 +672,7 @@ export const SCMainPage = styled.div`
     }
 
     .reply {
-      color: ${(props) => props.theme.colors.primeColor};
+      color: var(--prime-color);
       font-size: calc(0.4vw + 8px); //? 14 - 1440 | 16 - 1920
     }
   }
@@ -679,7 +681,7 @@ export const SCMainPage = styled.div`
     position: absolute;
     top: 15px;
     right: 15px;
-    color: ${(props) => props.theme.colors.gray};
+    color: var(--gray);
     font-size: calc(0.4vw + 8px); //? 14 - 1440 | 16 - 1920
   }
 
@@ -692,21 +694,32 @@ export const SCMainPage = styled.div`
     width: 22px;
 
     fill: none;
-    stroke: ${(props) => props.theme.colors.darkGray};
+    stroke: var(--dark-gray);
     stroke-width: 2px;
 
     transition: 200ms;
 
     &._active {
-      fill: ${(props) => props.theme.colors.red};
+      fill: var(--red);
       stroke: none;
     }
 
     &:hover {
       stroke: none;
-      fill: ${(props) => props.theme.colors.primeColor};
+      fill: var(--prime-color);
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 `

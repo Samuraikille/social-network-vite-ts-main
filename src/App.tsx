@@ -30,11 +30,11 @@ function App() {
   return (
     <>
       <div className="App">
-          <SCContainer>
-            <ThemeProvider theme={theme}>
-             <RouterProvider router={routerConfig} />
-            </ThemeProvider>
-          </SCContainer>    
+        <SCContainer>
+          <ThemeProvider theme={theme}>
+            <RouterProvider router={routerConfig} />
+          </ThemeProvider>
+        </SCContainer>
       </div>
     </>
   );

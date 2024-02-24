@@ -1,9 +1,9 @@
-import { SCSidebar } from "./Sidebar.styled";
+import { SCSideBar } from "./SideBar.styled";
 
 export const Sidebar = () => {
   return (
-    <SCSidebar>
-       <ul className="navbar__list">
+    <SCSideBar>
+      <ul className="navbar__list">
         <li className="navbar__item">
           <svg
             className="icon icon-profile"
@@ -159,8 +159,6 @@ export const Sidebar = () => {
           <span className="Badge">100</span>
         </li>
       </ul>
-    </SCSidebar>
-     
-
+    </SCSideBar>
   );
 };

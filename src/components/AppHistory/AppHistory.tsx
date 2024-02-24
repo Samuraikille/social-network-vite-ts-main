@@ -1,7 +1,9 @@
+
+
 export const AppHistory = () => {
   return (
     <div className="History">
-      <svg
+    <svg
         className="icon icon-slider-button"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 72 72"
@@ -102,6 +104,6 @@ export const AppHistory = () => {
           </div>
         </div>
       </div>
-    </div>
+  </div>
   );
 };

@@ -17,7 +17,7 @@ export const LoginPage = () => {
         </Link>
       </form>
       <a href="#">Забыли пароль?</a>
-      <RegistrationInfo linkPath="/registration"/>
+      <RegistrationInfo linkPath="/registration" />
     </SCLoginPage>
   );
 };

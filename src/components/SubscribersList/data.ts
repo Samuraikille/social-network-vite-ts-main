@@ -1,0 +1,58 @@
+export const userElemData = [
+    {
+        imgSource: "./img/profile/profile-img-1.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "N E W",
+        secondaryText: "Развитие",
+    },
+    {
+        imgSource: "./img/profile/profile-img-2.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "Aesthetics",
+        secondaryText: "Стиль",
+    },
+    {
+        imgSource: "./img/profile/profile-img-3.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "дом твоей эстетики",
+        secondaryText: "Творчество",
+    },
+    {
+        imgSource: "./img/profile/profile-img-4.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "wailet",
+        secondaryText: "Искусство",
+    },
+    {
+        imgSource: "./img/profile/profile-img-5.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "A W E S O M E",
+        secondaryText: "Стиль",
+    },
+    {
+        imgSource: "./img/profile/profile-img-6.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "minimalism",
+        secondaryText: "Фотография",
+    },
+    {
+        imgSource: "./img/profile/profile-img-7.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "Словарный запас",
+        secondaryText: "Литература",
+    },
+    {
+        imgSource: "./img/profile/profile-img-8.jpeg",
+        badgeNumber:"3",
+        altText: "User",
+        mainText: "Look",
+        secondaryText: "Мода",
+    },
+]

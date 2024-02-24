@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-export const SCSidebar = styled.nav`
+export const SCSideBar = styled.nav`
 
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
+  box-shadow: 0 0 10px var(--light-gray);
   border-radius: 20px;
-  margin-bottom: 20px;
   padding: calc(1vw + 11px);
-  background-color:${(props) => props.theme.colors.elemsBgs} ;
-  color: ${(props) => props.theme.colors.textColor};
-
+  background-color: var(--elems-bgc);
+  color: var(--text-color);
+  margin-bottom: 20px;
   .navbar__list {
     display: flex;
     flex-direction: column;
@@ -30,7 +29,7 @@ export const SCSidebar = styled.nav`
       flex: 0 1 25px;
       height: calc(1vw + 5px); //? 1440 - 20 | 1920 - 25
       object-fit: contain;
-      fill: ${(props) => props.theme.colors.primeColor};
+      fill: var(--prime-color);
     }
 
     .item__name {
@@ -38,12 +37,12 @@ export const SCSidebar = styled.nav`
     }
 
     &:hover {
-      background-color:${(props) => props.theme.colors.lightGray};
+      background-color: var(--light-gray);
     }
 
     &:active {
       transition: 100ms;
-      background-color: ${(props) => props.theme.colors.primeColor};
+      background-color: var(--prime-color);
       color: white;
 
       .icon {
@@ -52,9 +51,10 @@ export const SCSidebar = styled.nav`
 
       .Badge {
         background-color: white;
-        color: ${(props) => props.theme.colors.textColor};
+        color: var(--text-color);
       }
     }
   }
+
 
 `
