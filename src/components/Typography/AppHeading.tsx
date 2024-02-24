@@ -1,6 +1,7 @@
 interface IAppHeading {
   headingText: string;
   headingType: string;
+  className?: string;
 }
 
 export const AppHeading = ({ headingText, headingType }: IAppHeading) => {

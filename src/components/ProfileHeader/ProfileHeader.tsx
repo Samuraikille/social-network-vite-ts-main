@@ -1,3 +1,5 @@
+import { AppHeading } from "../Typography/AppHeading";
+
 export const ProfileHeader = () => {
   return (
     <div className="ProfileHeader">
@@ -16,7 +18,7 @@ export const ProfileHeader = () => {
       <div className="user__block">
         <img src="./img/users/denis-frolov.jpeg" alt="Denis Frolov" />
         <div className="user__description">
-          <h1 className="user__name">Денис Фролов</h1>
+          <AppHeading headingText="Денис Фролов" headingType="h1" className="user__name"/>
           <div className="user__info">
             <div className="parameter">
               <span className="key">Друзья</span>

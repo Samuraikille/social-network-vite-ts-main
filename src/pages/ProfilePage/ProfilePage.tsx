@@ -6,7 +6,7 @@ import { ProfileHeader } from "../../components/ProfileHeader/ProfileHeader";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { SubscribersList } from "../../components/SubscribersList/SubscribersList";
 import { Header } from "../../components/UI/Header/Header";
-import { UserBiography } from "../../components/UserBiography /UserBiography";
+import { UserBiography } from "../../components/UserBiography/UserBiography";
 import { UserPosts } from "../../components/UserPosts/UserPosts";
 import { WhatsNew } from "../../components/WhatsNew/WhatsNew";
 import { SCProfilePage } from "./ProfilePage.styled";

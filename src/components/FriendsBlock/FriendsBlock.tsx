@@ -1,8 +1,10 @@
+import { AppHeading } from "../Typography/AppHeading"
+
 export const FriendsBlock = () => {
   return (
     <div className="FriendsBlock">
       <div className="Friends__title">
-        <h2>Друзья</h2>
+        <AppHeading headingText="Друзья" headingType="h2"/>
         <span className="count">130</span>
       </div>
       <div className="Friends__wrapper">
