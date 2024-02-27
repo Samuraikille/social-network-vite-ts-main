@@ -18,7 +18,7 @@ export const ProfileHeader = () => {
       <div className="user__block">
         <img src="./img/users/denis-frolov.jpeg" alt="Denis Frolov" />
         <div className="user__description">
-          <AppHeading headingText="Денис Фролов" headingType="h1" className="user__name"/>
+          <AppHeading headingText="Денис Фролов" headingType="username" className="user__name"/> 
           <div className="user__info">
             <div className="parameter">
               <span className="key">Друзья</span>

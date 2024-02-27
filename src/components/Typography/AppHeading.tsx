@@ -9,6 +9,8 @@ export const AppHeading = ({ headingText, headingType }: IAppHeading) => {
     switch (headingType) {
       case "h1":
         return <h1>{headingText}</h1>;
+        case "username":
+        return <h1 className="user__name">{headingText}</h1>;
       case "h2":
         return <h2>{headingText}</h2>;
       case "h3":

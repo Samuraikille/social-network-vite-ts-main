@@ -1,3 +1,5 @@
+import { SCUserElem } from "./UserElem.styled";
+
 interface IUserElem {
   imgSource:string;
   altText: string;
@@ -8,8 +10,9 @@ interface IUserElem {
 }
 
 export const UserElem = ({imgSource,badgeNumber,altText,mainText,secondaryText, isOnline}:IUserElem) => {
-  return (
-    <div className="UserElem">
+  return ( 
+    <SCUserElem>
+      <div className="UserElem">
       <img src={imgSource} alt={altText} />
       <div className="user__description">
         <p className="main__text">{mainText}</p>
@@ -17,5 +20,7 @@ export const UserElem = ({imgSource,badgeNumber,altText,mainText,secondaryText, 
       </div>
       <span className="Badge">{badgeNumber}</span>
     </div>
+    </SCUserElem>
+    
   );
 };

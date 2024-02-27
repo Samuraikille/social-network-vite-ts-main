@@ -1,3 +1,5 @@
+import { SCMusicElem } from "./MusicElem.styled";
+
 interface IMusicElem {
   imgSource: string;
   altText: string;
@@ -14,13 +16,16 @@ export const MusicElem = ({
   isActive,
 }: IMusicElem) => {
   return (
-    <div className="MusicElem">
+    <SCMusicElem>
+      <div className="MusicElem">
       <img src={imgSource} alt={altText} />
-      <div className="music__description">
+      <div className="music__description"> 
         <p className="main__text">{mainText}</p>
         <p className="secondary__text">{secondaryText}</p>
       </div>
       <div className={`plus-button ${isActive && "_active"}`}></div>
     </div>
+    </SCMusicElem>
+    
   );
 };
