@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { AppHeading } from "../../components/Typography/AppHeading";
 import { AppButton } from "../../components/UI/AppButton/AppButton";
 import { AppInput } from "../../components/UI/AppInput/AppInput";
@@ -7,23 +6,23 @@ import * as yup from "yup";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
-
-
+import { useNavigate } from "react-router-dom";
 
 interface ISubmitProps {
   useremail: string;
-  usepassword: string;
+  userpassword: string;
 }
 const loginFormSchema = yup.object({
-  useremail: yup.string().email().required("Обязательное поле!"),
+  useremail: yup
+    .string()
+    .email("Введите почту в правельном формате")
+    .required("Обязательное поле!"),
   userpassword: yup
     .string()
-    .min(4, "Пароль должен содержать как минимум 4 символа!")
+    .min(8, "Пароль должен содержать как минимум 8 символа!")
     .required("Обязательное поле!"),
 });
-const onLoginSubmit: SubmitHandler<ISubmitProps> = () => {
-   
-}
+
 export const LoginPage = () => {
   const {
     control,
@@ -36,10 +35,20 @@ export const LoginPage = () => {
       userpassword: "",
     },
   });
+
+  const navigate = useNavigate();
+  const onLoginSubmit: SubmitHandler<ISubmitProps> = (data) => {
+    if (data) {
+      navigate("/main");
+    } else {
+      navigate("/");
+    }
+    console.log(data);
+  };
   return (
     <SCLoginPage>
       <AppHeading headingText="Авторизация" headingType="h1" />
-      <form action="#">
+      <form action="#" onSubmit={handleSubmit(onLoginSubmit)}>
         <Controller
           name="useremail"
           control={control}
@@ -67,9 +76,7 @@ export const LoginPage = () => {
           )}
         />
 
-        <Link to={"/main"}>
-          <AppButton buttonType="submit" buttonText="Войти" />
-        </Link>
+        <AppButton buttonType="submit" buttonText="Войти" />
       </form>
       <a href="#">Забыли пароль?</a>
       <RegistrationInfo linkPath="/registration" />
