@@ -1,4 +1,8 @@
+import { useGetUserByIdQuery } from "../../store/api/authApi";
+
 export const UserBiography = () => {
+  const user = localStorage.getItem("user_id")
+  const {data} = useGetUserByIdQuery(Number(user))
   return (
     <div className="bio">
       <div className="bio__data">
@@ -33,7 +37,7 @@ export const UserBiography = () => {
             />
           </svg>
           <p className="main__text">
-            Город: <span>Ташкент</span>
+            Город: <span>{data?.message.city}</span>
           </p>
         </div>
         <div className="data__item">

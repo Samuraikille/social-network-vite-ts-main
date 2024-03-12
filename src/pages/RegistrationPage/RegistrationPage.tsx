@@ -7,6 +7,8 @@ import { SCRegistrationPage } from "./RegistrationPage.styled";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
+import { useRegisterUserMutation } from "../../store/api/authApi";
+import { useEffect } from "react";
 interface ISubmitProps {
   username: string;
   userEmail: string;
@@ -45,14 +47,29 @@ export const RegistrationPage = () => {
   });
 
   const navigate = useNavigate();
+  const [registerUser, { data }] = useRegisterUserMutation();
   const onRegistrationSubmit: SubmitHandler<ISubmitProps> = (data) => {
-    console.log(data);
-    if (data) {
-      navigate("/");
-    } else {
-      navigate("/registration");
-    }
+    // if (data) {
+    //   navigate("/");
+    // } else {
+    //   navigate("/registration");
+    // }
+
+    registerUser({
+      email: data.userEmail,
+      password: data.userPassword,
+      name: data.username,
+      phone_number: data.userPhone,
+      user_city: data.userCity,
+    });
   };
+  useEffect(() => {
+    if (data?.user_id) {
+      navigate("/")
+    } else {
+      navigate("/registration")
+    }
+  }, [data]);
   return (
     <SCRegistrationPage>
       <AppHeading headingText="Регистрация" headingType="h1" />

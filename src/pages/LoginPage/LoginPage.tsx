@@ -7,6 +7,8 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLoginUserMutation } from "../../store/api/authApi";
 
 interface ISubmitProps {
   useremail: string;
@@ -37,14 +39,19 @@ export const LoginPage = () => {
   });
 
   const navigate = useNavigate();
+  const [loginUser, { data }] = useLoginUserMutation();
   const onLoginSubmit: SubmitHandler<ISubmitProps> = (data) => {
-    if (data) {
-      navigate("/main");
-    } else {
-      navigate("/");
-    }
-    console.log(data);
+    loginUser({ email: data.useremail, password: data.userpassword });
   };
+
+  useEffect(() => {
+    console.log(data);
+
+    if (data?.user_id) {
+      navigate("/profile");
+      localStorage.setItem("user_id", `${data?.user_id}`)
+    }
+  }, [data, navigate]);
   return (
     <SCLoginPage>
       <AppHeading headingText="Авторизация" headingType="h1" />
@@ -54,8 +61,8 @@ export const LoginPage = () => {
           control={control}
           render={({ field }) => (
             <AppInput
-              inputPlaceholder="Номер телефона"
-              inputType="tel"
+              inputPlaceholder="Введите почту"
+              inputType="text"
               isError={errors.useremail ? true : false}
               errorMessage={errors.useremail?.message}
               {...field}

@@ -1,6 +1,11 @@
 import { AppHeading } from "../Typography/AppHeading";
+import { useGetUserByIdQuery } from "../../store/api/authApi";
 
 export const ProfileHeader = () => {
+  // const user = useSelector((state: RootState)=> state.userSlice.user)
+  const user = localStorage.getItem("user_id")
+  const {data} = useGetUserByIdQuery(Number(user))
+  
   return (
     <div className="ProfileHeader">
       <svg
@@ -18,7 +23,7 @@ export const ProfileHeader = () => {
       <div className="user__block">
         <img src="./img/users/denis-frolov.jpeg" alt="Denis Frolov" />
         <div className="user__description">
-          <AppHeading headingText="Денис Фролов" headingType="username" className="user__name"/> 
+          <AppHeading headingText={`${data?.message.name}`} headingType="username" className="user__name"/> 
           <div className="user__info">
             <div className="parameter">
               <span className="key">Друзья</span>
