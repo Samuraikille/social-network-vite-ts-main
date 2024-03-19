@@ -75,5 +75,27 @@ export interface IDeletePostResponse {
   message: string;
 }
 
-
 //? TYPES FOR PHOTOS API
+
+export interface IGetPhotoByIdResponse {
+  status: number;
+  message: {
+    status: number;
+    message: [
+      {
+        post_id: null | number;
+        photo_path: string;
+        id: number;
+        post_fk: null;
+      }
+    ];
+  };
+}
+
+export interface IUpdatePhotoPayload {
+  photo_id: number;
+  photo_files: BinaryData;
+}
+export interface IUpdatePhotoResponse extends IDeletePostResponse {}
+
+export interface IDeletePhotoResponse extends IDeletePostResponse {}

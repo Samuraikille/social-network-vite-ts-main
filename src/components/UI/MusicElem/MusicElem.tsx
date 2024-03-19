@@ -8,7 +8,7 @@ interface IMusicElem {
   isActive: boolean;
 }
 
-export const MusicElem = ({
+export const MusicElem = ({ 
   imgSource,
   altText,
   mainText,

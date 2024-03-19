@@ -12,7 +12,7 @@ import type {
 export const postApi = createApi({
   reducerPath: "postApi",
   baseQuery: fetchBaseQuery({ baseUrl }),
-  endpoints: (builder) => ({
+  endpoints: (builder) => ({ 
     getPostById: builder.query<IGetPostByIdResponse, number>({
       query: (post_id) => `post?post_id=${post_id}`,
     }),
